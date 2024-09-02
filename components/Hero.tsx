@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section
       id='home'
-      className='min-h-screen flex items-center justify-center bg-gradient-to-t from-primary/20 to-background bg-opacity-50 bg-grid-pattern'>
+      className='min-h-screen flex items-center justify-center'>
       <div className='text-center'>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}

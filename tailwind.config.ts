@@ -9,9 +9,9 @@ const config: Config = {
   ],
   theme: {
   	extend: {
-  		backgroundImage: {
-  			 'grid-pattern': "linear-gradient(to right, #8080801a 1px, transparent 1px), linear-gradient(to bottom, #8080801a 1px, transparent 1px)"
-  		},
+		backgroundImage: {
+			'grid-pattern': "linear-gradient(to right, #80808033 1px, transparent 1px), linear-gradient(to bottom, #80808033 1px, transparent 1px)"
+		  },
 		  backgroundSize: {
 			'grid-pattern': '20px 20px',
 		  },

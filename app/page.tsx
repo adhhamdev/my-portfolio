@@ -29,7 +29,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <div className='min-h-screen bg-background text-foreground'>
+    <div className='min-h-screen text-foreground bg-gradient-to-t from-primary/20 to-background bg-grid-pattern bg-fixed'>
       <Header
         navItems={navItems}
         toggleMenu={toggleMenu}

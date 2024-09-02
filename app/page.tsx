@@ -9,24 +9,18 @@ import { useEffect, useState } from 'react'
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isLargeScreen, setIsLargeScreen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'education', 'skills', 'projects', 'contact']
-      const scrollPosition = window.scrollY
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sections[i])
-        if (section && scrollPosition >= section.offsetTop - 100) {
-          setActiveSection(sections[i])
-          break
-        }
-      }
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024)
     }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    checkScreenSize()
+    window.addEventListener('resize', checkScreenSize)
+
+    return () => window.removeEventListener('resize', checkScreenSize)
   }, [])
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
@@ -121,41 +115,62 @@ export default function Portfolio() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold">John Doe</a>
-          <button
-            className="z-50 relative"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            <AnimatePresence mode="wait">
-              {isMenuOpen ? (
-                <motion.div
-                  key="close"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.2 }}
+          <a href="#home" className="text-2xl font-bold">Adhham Safwan</a>
+          {isLargeScreen ? (
+            <div className="flex space-x-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className={`text-lg relative overflow-hidden group ${
+                    activeSection === item.href.slice(1) ? 'text-primary' : ''
+                  }`}
+                  onClick={() => setActiveSection(item.href.slice(1))}
                 >
-                  <X className="w-6 h-6" />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="menu"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Menu className="w-6 h-6" />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </button>
+                  {item.name}
+                  <motion.span
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-primary origin-left transform scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100"
+                    initial={false}
+                    animate={{ scaleX: activeSection === item.href.slice(1) ? 1 : 0 }}
+                  />
+                </a>
+              ))}
+            </div>
+          ) : (
+            <button
+              className="z-50 relative"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              <AnimatePresence mode="wait">
+                {isMenuOpen ? (
+                  <motion.div
+                    key="close"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <X className="w-6 h-6" />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="menu"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Menu className="w-6 h-6" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </button>
+          )}
         </nav>
       </header>
-
       <AnimatePresence>
-        {isMenuOpen && (
+        {!isLargeScreen && isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -198,7 +213,6 @@ export default function Portfolio() {
           </motion.div>
         )}
       </AnimatePresence>
-
       <main>
         <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/20 to-background">
           <div className="text-center">
@@ -208,7 +222,7 @@ export default function Portfolio() {
               transition={{ duration: 0.5 }}
               className="text-4xl md:text-6xl font-bold mb-4"
             >
-              John Doe
+              Adhham Safwan
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: -20 }}
@@ -374,7 +388,7 @@ export default function Portfolio() {
       <footer className="bg-muted py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; 2023 John Doe. All rights reserved.</p>
+            <p>&copy; 2023 Adhham Safwan. All rights reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors duration-300">
                 <Github className="w-6 h-6" />

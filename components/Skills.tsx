@@ -1,36 +1,65 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import {
-  Box,
-  Cloud,
-  Cpu,
-  Database,
-  GitBranch,
-  GitPullRequest,
-  Globe,
-  Server,
-  Terminal,
-  Users,
-} from 'lucide-react';
 
 export default function Skills() {
   const skills = [
-    { name: 'JavaScript', icon: <Terminal className='w-6 h-6' /> },
-    { name: 'TypeScript', icon: <Terminal className='w-6 h-6' /> },
-    { name: 'React', icon: <Cpu className='w-6 h-6' /> },
-    { name: 'Next.js', icon: <Cpu className='w-6 h-6' /> },
-    { name: 'Node.js', icon: <Server className='w-6 h-6' /> },
-    { name: 'Express', icon: <Server className='w-6 h-6' /> },
-    { name: 'MongoDB', icon: <Database className='w-6 h-6' /> },
-    { name: 'PostgreSQL', icon: <Database className='w-6 h-6' /> },
-    { name: 'GraphQL', icon: <Globe className='w-6 h-6' /> },
-    { name: 'REST APIs', icon: <Globe className='w-6 h-6' /> },
-    { name: 'AWS', icon: <Cloud className='w-6 h-6' /> },
-    { name: 'Docker', icon: <Box className='w-6 h-6' /> },
-    { name: 'Git', icon: <GitBranch className='w-6 h-6' /> },
-    { name: 'CI/CD', icon: <GitPullRequest className='w-6 h-6' /> },
-    { name: 'Agile Methodologies', icon: <Users className='w-6 h-6' /> },
+    {
+      name: 'JavaScript',
+      icon: <i className='devicon-javascript-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'TailwindCSS',
+      icon: <i className='devicon-tailwindcss-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'Bootstrap',
+      icon: <i className='devicon-bootstrap-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'TypeScript',
+      icon: <i className='devicon-typescript-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'React',
+      icon: <i className='devicon-react-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'Next.js',
+      icon: <i className='devicon-nextjs-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'Node.js',
+      icon: <i className='devicon-nodejs-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'Express',
+      icon: <i className='devicon-express-original colored text-5xl'></i>,
+    },
+    {
+      name: 'MongoDB',
+      icon: <i className='devicon-mongodb-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'Mongoose',
+      icon: <i className='devicon-mongoose-original colored text-5xl'></i>,
+    },
+    {
+      name: 'jQuery',
+      icon: <i className='devicon-jquery-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'REST APIs',
+      icon: <i className='devicon-javascript-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'Git',
+      icon: <i className='devicon-git-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'GitHub',
+      icon: <i className='devicon-github-plain colored text-5xl'></i>,
+    },
   ];
 
   return (

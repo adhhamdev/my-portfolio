@@ -5,14 +5,14 @@ import { motion } from 'framer-motion';
 export default function Education() {
   const education = [
     {
-      degree: 'Master of Science in Computer Science',
-      school: 'Tech University',
-      period: '2014 - 2016',
+      degree: 'BTEC Level 5 HND in Software Engineering',
+      school: 'Esoft Metro Campus',
+      period: '2024 - 2025',
     },
     {
-      degree: 'Bachelor of Science in Software Engineering',
-      school: 'State College',
-      period: '2010 - 2014',
+      degree: 'Diploma in Information technology',
+      school: 'Esoft Metro Campus',
+      period: '2023 - 2024',
     },
   ];
 

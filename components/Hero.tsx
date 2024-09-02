@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -10,6 +11,35 @@ export default function Hero() {
       id='home'
       className='min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/20 to-background'>
       <div className='text-center'>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+          className='mb-8'>
+          <motion.div
+            animate={{
+              y: [-10, 10, -10],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+            className='relative w-48 h-48 mx-auto rounded-full overflow-hidden shadow-lg'>
+            <Image
+              priority
+              width={200}
+              height={200}
+              src='/profile.jpg'
+              alt='Adhham Safwan'
+              className='rounded-full'
+            />
+          </motion.div>
+        </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

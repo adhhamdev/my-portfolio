@@ -42,7 +42,7 @@ export default function Header({
           Adhham Safwan
         </a>
         {isLargeScreen ? (
-          <div className='flex space-x-4'>
+          <div className='flex space-x-5'>
             {navItems.map((item) => (
               <a
                 key={item.name}

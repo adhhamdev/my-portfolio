@@ -6,28 +6,41 @@ import { Code, ExternalLink } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
-      name: 'E-commerce Platform',
-      description:
-        'A full-stack e-commerce solution with real-time inventory management.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
-      liveLink: 'https://example-ecommerce.com',
-      sourceLink: 'https://github.com/yourusername/ecommerce-platform',
+      name: 'Airflix',
+      description: 'A movie browsing site powered by TMDB API',
+      technologies: ['JavaScript', 'React.js', 'Node.js', 'REST API'],
+      liveLink: 'https://airflix.vercel.app',
+      sourceLink: 'https://github.com/adhhamdev/airflix',
     },
     {
-      name: 'Task Management App',
+      name: 'Pictoria',
       description:
-        'A collaborative task management application with real-time updates.',
-      technologies: ['Next.js', 'GraphQL', 'PostgreSQL', 'Auth0'],
-      liveLink: 'https://example-taskmanager.com',
-      sourceLink: 'https://github.com/yourusername/task-manager',
+        'A site to explore high quality photos powered by Unsplash API',
+      technologies: ['Next.js', 'Node.js', 'TailwindCSS', 'REST API'],
+      liveLink: 'https://pictoria-adhham.vercel.app',
+      sourceLink: 'https://github.com/adhhamdev/pictoria',
     },
     {
-      name: 'Weather Dashboard',
+      name: 'Startup Directory',
       description:
-        'A responsive weather dashboard with location-based forecasts.',
-      technologies: ['React', 'OpenWeatherMap API', 'Chart.js'],
-      liveLink: 'https://example-weather.com',
-      sourceLink: 'https://github.com/yourusername/weather-dashboard',
+        'Full Stack web app with collection of Startups across the world to lookup.',
+      technologies: [
+        'Next.js',
+        'Node.js',
+        'TailwindCSS',
+        'Mongoose',
+        'MongoDB',
+      ],
+      liveLink: 'https://startup-directory-adhham.vercel.app',
+      sourceLink: 'https://github.com/adhhamdev/startup-directory',
+    },
+    {
+      name: 'TO-DO List',
+      description:
+        'To-do list web app built on LocalStorage API, for CodeAlpha as an Web Development Intern.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      liveLink: 'https://code-alpha-to-do.vercel.app',
+      sourceLink: 'https://github.com/adhhamdev/CodeAlpha_To-do',
     },
   ];
 

@@ -5,25 +5,11 @@ import { motion } from 'framer-motion';
 export default function Experience() {
   const experiences = [
     {
-      title: 'Senior Full Stack Developer',
-      company: 'Tech Innovators Inc.',
-      period: '2020 - Present',
+      title: 'Web Developer Intern',
+      company: 'CodeAlpha',
+      period: '2024 - Present',
       description:
-        'Led development of scalable web applications using React, Node.js, and AWS.',
-    },
-    {
-      title: 'Full Stack Developer',
-      company: 'Digital Solutions Ltd.',
-      period: '2018 - 2020',
-      description:
-        'Developed and maintained multiple client websites and web applications.',
-    },
-    {
-      title: 'Junior Web Developer',
-      company: 'StartUp Ventures',
-      period: '2016 - 2018',
-      description:
-        'Assisted in the development of company website and internal tools.',
+        'Developed a To-do List web applications with pure HTML, CSS, and vanilla JavaScript..',
     },
   ];
 

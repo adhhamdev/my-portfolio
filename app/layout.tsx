@@ -39,11 +39,6 @@ export const metadata: Metadata = {
     creator: '@adhham_safwan',
     images: ['https://adhham-safwan-portfolio.com/twitter-image.jpg'],
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
   robots: {
     index: true,
     follow: true,
@@ -57,8 +52,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    shortcut: '/profile.jpg',
+    apple: '/profile.jpg',
   },
 };
 
@@ -69,6 +64,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className='scroll-smooth'>
+      <head>
+        <link
+          rel='stylesheet'
+          type='text/css'
+          href='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css'
+        />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );

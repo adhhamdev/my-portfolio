@@ -17,6 +17,14 @@ export default function Contact() {
               name='access_key'
               value='36fb9950-6770-4ad1-b4fa-ce3b86213a0f'
             />
+            <input
+              type='hidden'
+              name='subject'
+              value='Portfolio visitor message'></input>
+            <input
+              type='hidden'
+              name='from_name'
+              value='Portfolio visitor'></input>
 
             <Input
               name='name'

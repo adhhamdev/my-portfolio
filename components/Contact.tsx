@@ -8,8 +8,18 @@ export default function Contact() {
       <div className='container mx-auto px-4'>
         <h2 className='text-3xl font-bold mb-8 text-center'>Contact Me</h2>
         <div className='max-w-md mx-auto'>
-          <form onSubmit={(e) => e.preventDefault()} className='space-y-4'>
+          <form
+            action='https://api.web3forms.com/submit'
+            method='POST'
+            className='space-y-4'>
+            <input
+              type='hidden'
+              name='access_key'
+              value='36fb9950-6770-4ad1-b4fa-ce3b86213a0f'
+            />
+
             <Input
+              name='name'
               type='text'
               placeholder='Your Name'
               required
@@ -19,6 +29,7 @@ export default function Contact() {
               title='Please enter a valid name (letters and spaces only)'
             />
             <Input
+              name='email'
               type='email'
               placeholder='Your Email'
               required
@@ -26,6 +37,7 @@ export default function Contact() {
               title='Please enter a valid email address'
             />
             <Textarea
+              name='message'
               placeholder='Your Message'
               required
               minLength={10}

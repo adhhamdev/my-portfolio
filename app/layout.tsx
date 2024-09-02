@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: 'Adhham Safwan',
     images: [
       {
-        url: 'https://adhham-safwan-portfolio.com/og-image.jpg',
+        url: '/opengraph-image.svg',
         width: 1200,
         height: 630,
         alt: 'Adhham Safwan',
@@ -36,8 +36,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Adhham Safwan',
     description: 'Explore the work and projects of Adhham Safwan',
-    creator: '@adhham_safwan',
-    images: ['https://adhham-safwan-portfolio.com/twitter-image.jpg'],
+    creator: '@AdhhamDev',
+    site: 'https://x.com/AdhhamDev',
+    images: ['/opengraph-image.svg'],
   },
   robots: {
     index: true,
@@ -49,11 +50,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/profile.jpg',
-    apple: '/profile.jpg',
   },
 };
 

@@ -5,28 +5,38 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Adhham Safwan',
-  description: 'Portfolio of Adhham Safwan',
+  title: 'Adhham Safwan | Web Developer & Software Engineer',
+  description:
+    'Experienced web developer and software engineer specializing in modern web technologies. Explore my portfolio showcasing innovative projects and professional experiences.',
   keywords: [
     'portfolio',
     'web developer',
     'software engineer',
     'Adhham Safwan',
+    'frontend development',
+    'backend development',
+    'full-stack developer',
+    'React',
+    'Next.js',
+    'TypeScript',
+    'Node.js',
+    'responsive design',
   ],
-  authors: [{ name: 'Adhham Safwan' }],
+  authors: [{ name: 'Adhham Safwan', url: 'https://adhhamdev.vercel.app' }],
   creator: 'Adhham Safwan',
   publisher: 'Adhham Safwan',
   openGraph: {
-    title: "Adhham Safwan's Portfolio",
-    description: 'Explore the work and projects of Adhham Safwan',
+    title: 'Adhham Safwan | Web Developer & Software Engineer',
+    description:
+      'Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.',
     url: 'https://adhhamdev.vercel.app',
-    siteName: 'Adhham Safwan',
+    siteName: 'Adhham Safwan Portfolio',
     images: [
       {
         url: '/opengraph-image.svg',
         width: 1200,
         height: 630,
-        alt: 'Adhham Safwan',
+        alt: 'Adhham Safwan Portfolio',
       },
     ],
     locale: 'en_US',
@@ -34,10 +44,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Adhham Safwan',
-    description: 'Explore the work and projects of Adhham Safwan',
+    title: 'Adhham Safwan | Web Developer & Software Engineer',
+    description:
+      'Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.',
     creator: '@AdhhamDev',
-    site: 'https://x.com/AdhhamDev',
+    site: '@AdhhamDev',
     images: ['/opengraph-image.svg'],
   },
   robots: {
@@ -50,6 +61,14 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.jpg',
+  },
+  manifest: '/site.webmanifest',
+  alternates: {
+    canonical: 'https://adhhamdev.vercel.app',
   },
 };
 
@@ -66,6 +85,27 @@ export default function RootLayout({
           type='text/css'
           href='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css'
         />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <script type='application/ld+json'>
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Adhham Safwan",
+              "url": "https://adhhamdev.vercel.app",
+              "sameAs": [
+                "https://x.com/AdhhamDev",
+                "https://github.com/adhhamdev"
+              ],
+              "jobTitle": "Web Developer & Software Engineer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Freelance"
+              },
+              "description": "Experienced web developer and software engineer specializing in modern web technologies."
+            }
+          `}
+        </script>
       </head>
       <body className={inter.className}>{children}</body>
     </html>

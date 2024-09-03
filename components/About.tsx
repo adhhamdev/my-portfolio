@@ -8,7 +8,7 @@ export default function About() {
         <div className='max-w-2xl mx-auto'>
           <p className='mb-4'>
             Highly motivated BTEC HND in Software Engineering student and
-            self-taught Full Stack Developer with a strong focus on building
+            self-taught Full Stack Developer with a strong focus on buildlling
             websites with exceptional SEO and accessibility. Skilled in creating
             visually attractive and high-performance websites. Seeking
             opportunities to contribute my expertise and creativity. I have a

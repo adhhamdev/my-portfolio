@@ -1,55 +1,56 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from "next";
+import Script from "next/script"
+import { Inter } from "next/font/google";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Adhham Safwan | Web Developer & Software Engineer',
+  title: "Adhham Safwan | Web Developer & Software Engineer",
   description:
-    'Experienced web developer and software engineer specializing in modern web technologies. Explore my portfolio showcasing innovative projects and professional experiences.',
+    "Experienced web developer and software engineer specializing in modern web technologies. Explore my portfolio showcasing innovative projects and professional experiences.",
   keywords: [
-    'portfolio',
-    'web developer',
-    'software engineer',
-    'Adhham Safwan',
-    'frontend development',
-    'backend development',
-    'full-stack developer',
-    'React',
-    'Next.js',
-    'TypeScript',
-    'Node.js',
-    'responsive design',
+    "portfolio",
+    "web developer",
+    "software engineer",
+    "Adhham Safwan",
+    "frontend development",
+    "backend development",
+    "full-stack developer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "responsive design",
   ],
-  authors: [{ name: 'Adhham Safwan', url: 'https://adhham.vercel.app' }],
-  creator: 'Adhham Safwan',
-  publisher: 'Adhham Safwan',
+  authors: [{ name: "Adhham Safwan", url: "https://adhham.vercel.app" }],
+  creator: "Adhham Safwan",
+  publisher: "Adhham Safwan",
   openGraph: {
-    title: 'Adhham Safwan | Web Developer & Software Engineer',
+    title: "Adhham Safwan | Web Developer & Software Engineer",
     description:
-      'Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.',
-    url: 'https://adhham.vercel.app',
-    siteName: 'Adhham Safwan Portfolio',
+      "Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.",
+    url: "https://adhham.vercel.app",
+    siteName: "Adhham Safwan Portfolio",
     images: [
       {
-        url: '/opengraph-image.svg',
+        url: "/opengraph-image.svg",
         width: 1200,
         height: 630,
-        alt: 'Adhham Safwan Portfolio',
+        alt: "Adhham Safwan Portfolio",
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Adhham Safwan | Web Developer & Software Engineer',
+    card: "summary_large_image",
+    title: "Adhham Safwan | Web Developer & Software Engineer",
     description:
-      'Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.',
-    creator: '@AdhhamDev',
-    site: '@AdhhamDev',
-    images: ['/opengraph-image.svg'],
+      "Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.",
+    creator: "@AdhhamDev",
+    site: "@AdhhamDev",
+    images: ["/opengraph-image.svg"],
   },
   robots: {
     index: true,
@@ -57,13 +58,13 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   alternates: {
-    canonical: 'https://adhham.vercel.app',
+    canonical: "https://adhham.vercel.app",
   },
 };
 
@@ -73,15 +74,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className='scroll-smooth'>
+    <html lang="en" className="scroll-smooth">
       <head>
         <link
-          rel='stylesheet'
-          type='text/css'
-          href='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css'
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <script type='application/ld+json'>
+        <Script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
@@ -100,7 +100,7 @@ export default function RootLayout({
               "description": "Experienced web developer and software engineer specializing in modern web technologies."
             }
           `}
-        </script>
+        </Script>
       </head>
       <body className={inter.className}>{children}</body>
     </html>

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     "Node.js",
     "responsive design",
   ],
-  authors: [{ name: "Adhham Safwan", url: "https://adhham.vercel.app" }],
+  authors: [{ name: "Adhham Safwan", url: "https://adhham.me" }],
   creator: "Adhham Safwan",
   publisher: "Adhham Safwan",
   openGraph: {
     title: "Adhham Safwan | Web Developer & Software Engineer",
     description:
       "Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.",
-    url: "https://adhham.vercel.app",
+    url: "https://adhham.me",
     siteName: "Adhham Safwan Portfolio",
     images: [
       {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://adhham.vercel.app",
+    canonical: "https://adhham.me",
   },
 };
 
@@ -82,7 +82,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Adhham Safwan",
-              "url": "https://adhham.vercel.app",
+              "url": "https://adhham.me",
               "sameAs": [
                 "https://x.com/AdhhamDev",
                 "https://github.com/adhhamdev"

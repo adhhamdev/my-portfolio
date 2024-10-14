@@ -16,6 +16,7 @@ export default function Contact() {
               type='hidden'
               name='access_key'
               value='36fb9950-6770-4ad1-b4fa-ce3b86213a0f'
+              aria-hidden='true'
             />
             <input
               type='hidden'
@@ -35,6 +36,7 @@ export default function Contact() {
               maxLength={50}
               pattern='[A-Za-z\s]+'
               title='Please enter a valid name (letters and spaces only)'
+              autoComplete='name'
             />
             <Input
               name='email'
@@ -43,6 +45,7 @@ export default function Contact() {
               required
               pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
               title='Please enter a valid email address'
+              autoComplete='email'
             />
             <Textarea
               name='message'
@@ -51,6 +54,7 @@ export default function Contact() {
               minLength={10}
               maxLength={500}
               rows={4}
+              autoComplete='off'
             />
             <Button
               type='submit'

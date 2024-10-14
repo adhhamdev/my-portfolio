@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Script from "next/script"
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -76,7 +76,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <Script type="application/ld+json">
+        <Script id="json-ld" type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",

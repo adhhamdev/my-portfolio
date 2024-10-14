@@ -6,6 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://adhham.me"),
   title: "Adhham Safwan | Web Developer & Software Engineer",
   description:
     "Experienced web developer and software engineer specializing in modern web technologies. Explore my portfolio showcasing innovative projects and professional experiences.",

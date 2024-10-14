@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     "Node.js",
     "responsive design",
   ],
-  authors: [{ name: "Adhham Safwan", url: "https://adhham.me" }],
+  authors: [{ name: "Adhham Safwan", url: "/" }],
   creator: "Adhham Safwan",
   publisher: "Adhham Safwan",
   openGraph: {
     title: "Adhham Safwan | Web Developer & Software Engineer",
     description:
       "Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.",
-    url: "https://adhham.me",
+    url: "/",
     siteName: "Adhham Safwan Portfolio",
     images: [
       {
@@ -63,10 +63,7 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  alternates: {
-    canonical: "https://adhham.me",
-  },
+  }
 };
 
 export default function RootLayout({
@@ -97,6 +94,7 @@ export default function RootLayout({
             }
           `}
         </Script>
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

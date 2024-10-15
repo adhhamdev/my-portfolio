@@ -7,9 +7,23 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://adhham.me"),
-  title: "Adhham Safwan | Web Developer & Software Engineer",
+  title: "Adhham Safwan | Full Stack Web Developer",
+  category: "Technology, Lifestyle, Education",
+  appleWebApp: {
+    capable: true,
+    title: 'Adhham Safwan',
+    statusBarStyle: 'black-translucent',
+    startupImage: [
+      '/profile.jpg',
+    ],
+  },
+  icons: {
+    icon: '/profile.jpg',
+    apple: '/profile.jpg',
+  },
+  applicationName: "Adhham Safwan",
   description:
-    "Experienced web developer and software engineer specializing in modern web technologies. Explore my portfolio showcasing innovative projects and professional experiences.",
+    "Experienced web developer and undergrauate specializing in modern web technologies. Explore my portfolio showcasing innovative projects and professional experiences.",
   keywords: [
     "portfolio",
     "web developer",
@@ -28,11 +42,11 @@ export const metadata: Metadata = {
   creator: "Adhham Safwan",
   publisher: "Adhham Safwan",
   openGraph: {
-    title: "Adhham Safwan | Web Developer & Software Engineer",
+    title: "Adhham Safwan | Full Stack Web Developer",
     description:
       "Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.",
     url: "/",
-    siteName: "Adhham Safwan Portfolio",
+    siteName: "Adhham Safwan's Portfolio",
     images: [
       {
         url: "/opengraph-image.svg",
@@ -46,7 +60,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adhham Safwan | Web Developer & Software Engineer",
+    title: "Adhham Safwan | Full Stack Web Developer",
     description:
       "Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.",
     creator: "@AdhhamDev",
@@ -85,12 +99,12 @@ export default function RootLayout({
                 "https://x.com/AdhhamDev",
                 "https://github.com/adhhamdev"
               ],
-              "jobTitle": "Web Developer & Software Engineer",
+              "jobTitle": "Full Stack Web Developer",
               "worksFor": {
                 "@type": "Organization",
                 "name": "Freelance"
               },
-              "description": "Experienced web developer and software engineer specializing in modern web technologies."
+              "description": "Experienced web developer and undergrauate specializing in modern web technologies."
             }
           `}
         </Script>

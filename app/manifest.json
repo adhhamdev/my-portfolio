@@ -1,0 +1,20 @@
+{
+  "name": "Adhham Safwan",
+  "short_name": "Adhham Safwan",
+  "description": "Portfolio of Adhham Safwan, a Full Stack Web Developer and Undergraduate",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/profile.jpg",
+      "sizes": "440x440",
+      "type": "image/jpg"
+    }
+  ],
+  "lang": "en-US",
+  "dir": "ltr",
+  "orientation": "any",
+  "categories": ["social", "productivity", "educatrion", "technology"]
+}

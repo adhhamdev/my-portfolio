@@ -14,7 +14,6 @@ import { useState } from 'react';
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -34,8 +33,6 @@ export default function Portfolio() {
         navItems={navItems}
         toggleMenu={toggleMenu}
         isMenuOpen={isMenuOpen}
-        activeSection={activeSection}
-        setActiveSection={setActiveSection}
       />
       <main>
         <Hero />
@@ -65,12 +62,7 @@ export default function Portfolio() {
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className={`text-4xl font-bold mb-8 relative overflow-hidden group ${activeSection === item.href.slice(1) ? 'text-primary' : ''
-                    }`}
-                  onClick={() => {
-                    toggleMenu();
-                    setActiveSection(item.href.slice(1));
-                  }}
+                  className={`text-4xl font-bold mb-8 relative overflow-hidden group`}
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 50 }}
@@ -79,9 +71,6 @@ export default function Portfolio() {
                   <motion.span
                     className='absolute bottom-0 left-0 w-full h-1 bg-primary origin-left transform scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100'
                     initial={false}
-                    animate={{
-                      scaleX: activeSection === item.href.slice(1) ? 1 : 0,
-                    }}
                   />
                 </motion.a>
               ))}

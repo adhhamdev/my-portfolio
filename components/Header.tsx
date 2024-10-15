@@ -11,16 +11,12 @@ interface HeaderProps {
   }[];
   toggleMenu: () => void;
   isMenuOpen: boolean;
-  activeSection: string;
-  setActiveSection: (section: string) => void;
 }
 
 export default function Header({
   navItems,
   toggleMenu,
   isMenuOpen,
-  activeSection,
-  setActiveSection,
 }: HeaderProps) {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,11 +42,10 @@ export default function Header({
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-background/80 backdrop-blur-sm border-b'
-          : 'bg-transparent'
-      }`}>
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-background/80 backdrop-blur-sm border-b'
+        : 'bg-transparent'
+        }`}>
       <nav className='container mx-auto px-4 py-4 flex justify-between items-center'>
         <a href='#home' className='text-2xl font-bold'>
           Adhham Safwan
@@ -61,17 +56,11 @@ export default function Header({
               <a
                 key={item.name}
                 href={item.href}
-                className={`text-lg relative overflow-hidden group ${
-                  activeSection === item.href.slice(1) ? 'text-primary' : ''
-                }`}
-                onClick={() => setActiveSection(item.href.slice(1))}>
+                className={`text-lg relative overflow-hidden group`}>
                 {item.name}
                 <motion.span
                   className='absolute bottom-0 left-0 w-full h-0.5 bg-primary origin-left transform scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100'
                   initial={false}
-                  animate={{
-                    scaleX: activeSection === item.href.slice(1) ? 1 : 0,
-                  }}
                 />
               </a>
             ))}

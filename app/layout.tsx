@@ -14,12 +14,8 @@ export const metadata: Metadata = {
     title: 'Adhham Safwan',
     statusBarStyle: 'black-translucent',
     startupImage: [
-      '/profile.jpg',
+      '/icon.jpeg',
     ],
-  },
-  icons: {
-    icon: '/profile.jpg',
-    apple: '/profile.jpg',
   },
   applicationName: "Adhham Safwan",
   description:

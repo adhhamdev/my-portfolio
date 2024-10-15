@@ -1,15 +1,27 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
+import AnimatedGridPattern from './ui/animated-grid-pattern';
 
 export default function Hero() {
   return (
     <section
       id='home'
       className='min-h-screen flex items-center justify-center'>
+      <AnimatedGridPattern
+        numSquares={100}
+        maxOpacity={0.5}
+        duration={10}
+        repeatDelay={1}
+        className={cn(
+          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
+        )}
+      />
       <div className='text-center'>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -62,8 +74,8 @@ export default function Hero() {
           <Button
             asChild
             className='transition-transform duration-300 hover:scale-105'>
-            <a href='/resume.pdf' download>
-              Download Resume
+            <a href='/cv.pdf' title='Download CV in PDF' download>
+              Download CV
             </a>
           </Button>
           <Button

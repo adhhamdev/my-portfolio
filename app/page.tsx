@@ -29,7 +29,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <div className='min-h-screen text-foreground bg-gradient-to-t from-primary/20 to-background bg-grid-pattern bg-fixed'>
+    <div className='min-h-screen text-foreground from-primary/20  bg-fixed'>
       <Header
         navItems={navItems}
         toggleMenu={toggleMenu}
@@ -65,9 +65,8 @@ export default function Portfolio() {
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className={`text-4xl font-bold mb-8 relative overflow-hidden group ${
-                    activeSection === item.href.slice(1) ? 'text-primary' : ''
-                  }`}
+                  className={`text-4xl font-bold mb-8 relative overflow-hidden group ${activeSection === item.href.slice(1) ? 'text-primary' : ''
+                    }`}
                   onClick={() => {
                     toggleMenu();
                     setActiveSection(item.href.slice(1));

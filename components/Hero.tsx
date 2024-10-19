@@ -74,7 +74,7 @@ export default function Hero() {
           <Button
             asChild
             className='transition-transform duration-300 hover:scale-105'>
-            <a href='/cv.pdf' title='Download CV in PDF' download>
+            <a href='adhham_safwan-resume.pdf' title='Download CV in PDF' download>
               Download CV
             </a>
           </Button>

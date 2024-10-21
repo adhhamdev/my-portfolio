@@ -6,17 +6,38 @@ import { Code, ExternalLink } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
+      name: 'Islamic Center Management System',
+      description: 'A Fullstack web app for managing Islamic Center activities.',
+      technologies: ['Next.js', 'TailwindCSS', 'TypeScript', 'Supabase', 'Supabase Auth', 'Zod', 'Framer Motion'],
+      liveLink: 'https://masjidos.vercel.app',
+      sourceLink: 'https://github.com/adhhamdev/masjid-os',
+    },
+    {
+      name: 'Mirage AI',
+      description: 'Create stunning images with the AI-powered tool - outperforming many popular alternatives.',
+      technologies: ['Next.js', 'TailwindCSS', 'REST API', 'Hugging Face', 'Vercel Blob', 'Vercel AI SDK', 'Framer Motion'],
+      liveLink: 'https://mirageai.vercel.app',
+      sourceLink: 'https://github.com/adhhamdev/mirage',
+    },
+    {
+      name: 'Minar',
+      description: 'A web application that shows accurate prayer times for various locations worldwide.',
+      technologies: ['Next.js', 'TailwindCSS', 'REST API', 'Framer Motion'],
+      liveLink: 'https://minarapp.vercel.app',
+      sourceLink: 'https://github.com/adhhamdev/minar',
+    },
+    {
       name: 'Airflix',
-      description: 'A movie browsing site powered by TMDB API',
-      technologies: ['JavaScript', 'React.js', 'Node.js', 'REST API'],
+      description: 'A movie browsing site powered by TMDB API.',
+      technologies: ['React.js', 'REST API'],
       liveLink: 'https://airflix.vercel.app',
       sourceLink: 'https://github.com/adhhamdev/airflix',
     },
     {
       name: 'Pictoria',
       description:
-        'A site to explore high quality photos powered by Unsplash API',
-      technologies: ['Next.js', 'Node.js', 'TailwindCSS', 'REST API'],
+        'A site to explore high quality photos powered by Unsplash API.',
+      technologies: ['Next.js', 'TailwindCSS', 'REST API'],
       liveLink: 'https://pictoria-adhham.vercel.app',
       sourceLink: 'https://github.com/adhhamdev/pictoria',
     },
@@ -26,7 +47,6 @@ export default function Projects() {
         'Full Stack web app with collection of Startups across the world to lookup.',
       technologies: [
         'Next.js',
-        'Node.js',
         'TailwindCSS',
         'Mongoose',
         'MongoDB',
@@ -55,19 +75,21 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className='bg-muted p-6 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105'>
-              <h3 className='text-xl font-semibold mb-2'>{project.name}</h3>
-              <p className='text-muted-foreground mb-4'>
-                {project.description}
-              </p>
-              <div className='flex flex-wrap gap-2 mb-4'>
-                {project.technologies.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className='bg-primary/10 text-primary px-2 py-1 rounded-full text-sm'>
-                    {tech}
-                  </span>
-                ))}
+              className='bg-muted p-6 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 flex flex-col justify-between'>
+              <div>
+                <h3 className='text-xl font-semibold mb-2'>{project.name}</h3>
+                <p className='text-muted-foreground mb-4'>
+                  {project.description}
+                </p>
+                <div className='flex flex-wrap gap-2 mb-4'>
+                  {project.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className='bg-primary/10 text-primary px-2 py-1 rounded-full text-sm'>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
               <div className='flex space-x-4'>
                 <a

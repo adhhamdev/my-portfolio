@@ -10,7 +10,7 @@ export default function Skills() {
     },
     {
       name: 'TailwindCSS',
-      icon: <i className='devicon-tailwindcss-plain colored text-5xl'></i>,
+      icon: <i className='devicon-tailwindcss-original colored text-5xl'></i>,
     },
     {
       name: 'Bootstrap',
@@ -21,8 +21,8 @@ export default function Skills() {
       icon: <i className='devicon-typescript-plain colored text-5xl'></i>,
     },
     {
-      name: 'React',
-      icon: <i className='devicon-react-plain colored text-5xl'></i>,
+      name: 'React.js',
+      icon: <i className='devicon-react-original colored text-5xl'></i>,
     },
     {
       name: 'Next.js',
@@ -58,8 +58,24 @@ export default function Skills() {
     },
     {
       name: 'GitHub',
-      icon: <i className='devicon-github-plain colored text-5xl'></i>,
+      icon: <i className='devicon-github-original colored text-5xl'></i>,
     },
+    {
+      name: 'Supabase',
+      icon: <i className='devicon-supabase-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'Vercel',
+      icon: <i className='devicon-vercel-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'Figma',
+      icon: <i className='devicon-figma-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'Framer Motion',
+      icon: <i className='devicon-framermotion-original text-5xl'></i>,
+    }
   ];
 
   return (

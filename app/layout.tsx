@@ -85,9 +85,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <Script id="json-ld" type="application/ld+json">
-          {JSON.stringify([personSchema, websiteSchema, resumeSchema])}
-        </Script>
+        <Script id="json-ld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([personSchema, websiteSchema, resumeSchema]) }} />
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       </head>
       <body className={inter.className}>{children}</body>

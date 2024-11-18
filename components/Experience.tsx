@@ -7,9 +7,16 @@ export default function Experience() {
     {
       title: 'Web Developer Intern',
       company: 'CodeAlpha',
+      period: '2024 - 2024',
+      description:
+        'Developed a To-do List web application using HTML, CSS, and JavaScript, focusing on user experience and performance optimization.',
+    },
+    {
+      title: 'Web Developer Intern',
+      company: 'CodeSec Global',
       period: '2024 - Present',
       description:
-        'Developed a To-do List web applications with pure HTML, CSS, and vanilla JavaScript..',
+        'Contributed to the development of client web applications using modern technologies, ensuring high-quality code and adherence to best practices.',
     },
   ];
 

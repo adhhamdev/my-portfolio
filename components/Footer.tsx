@@ -2,8 +2,8 @@ import { Github, Instagram, Linkedin, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className='py-8'>
-      <div className='container mx-auto px-4'>
+    <footer className='py-8 px-4 md:px-16'>
+      <div className='container mx-auto'>
         <div className='flex flex-col md:flex-row justify-between items-center'>
           <p>
             &copy; {new Date().getFullYear()} Adhham Safwan. All rights

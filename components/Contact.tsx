@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section
       id='contact'
-      className='py-20 backdrop-blur-lg backdrop-saturate-0 shadow-lg mx-3 md:mx-10 rounded-xl border-2'>
+      className='py-20 bg-background shadow-lg mx-3 md:mx-10 rounded-xl border-2'>
       <div className='container mx-auto px-4'>
         <h2 className='text-3xl font-bold mb-8 text-center'>Contact Me</h2>
         <div className='max-w-md mx-auto'>

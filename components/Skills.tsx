@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 export default function Skills() {
   const skills = [
@@ -65,6 +65,18 @@ export default function Skills() {
       icon: <i className='devicon-supabase-plain colored text-5xl'></i>,
     },
     {
+      name: 'Firebase',
+      icon: <i className='devicon-firebase-plain colored text-5xl'></i>,
+    },
+    {
+      name: 'FlutterFlow',
+      icon: <img src='/flutterflow.jpeg' alt='FlutterFlow' className='w-10 h-10 rounded' />,
+    },
+    {
+      name: 'PayloadCMS',
+      icon: <img src='/payloadcms.png' alt='PayloadCMS' className='w-10 h-10 rounded' />,
+    },
+    {
       name: 'Vercel',
       icon: <i className='devicon-vercel-plain colored text-5xl'></i>,
     },
@@ -75,13 +87,13 @@ export default function Skills() {
     {
       name: 'Framer Motion',
       icon: <i className='devicon-framermotion-original text-5xl'></i>,
-    }
+    },
   ];
 
   return (
     <section id='skills' className='py-20 bg-muted'>
       <div className='container mx-auto px-4'>
-        <h2 className='text-3xl font-bold mb-8 text-center'>Skills</h2>
+        <h2 className='text-3xl font-bold mb-8 text-center text-dark-bg-foreground'>Skills</h2>
         <div className='max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
           {skills.map((skill, index) => (
             <motion.div

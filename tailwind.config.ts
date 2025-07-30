@@ -54,7 +54,8 @@ const config: Config = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+			"dark-bg-foreground": 'hsl(var(--dark-bg-foreground))'
   		},
   		animation: {
   			ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite'

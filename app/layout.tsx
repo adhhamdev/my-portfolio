@@ -1,4 +1,6 @@
+import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { personSchema, profilePageSchema, resumeSchema, websiteSchema } from "@/lib/jsonld-schema";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -87,7 +89,19 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([personSchema, websiteSchema, resumeSchema, profilePageSchema]) }} />
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <AnimatedGridPattern
+        numSquares={100}
+        maxOpacity={0.5}
+        duration={10}
+        repeatDelay={1}
+        className={cn(
+          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 fixed z-[-1]",
+        )}
+      />
+      </body>
     </html>
   );
 }

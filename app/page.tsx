@@ -9,7 +9,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
 
 export default function Portfolio() {
@@ -28,7 +28,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <div className='min-h-screen text-foreground from-primary/20  bg-fixed'>
+    <div className='min-h-screen text-foreground from-primary/20 bg-fixed'>
       <Header
         navItems={navItems}
         toggleMenu={toggleMenu}

@@ -24,7 +24,7 @@ export default function Projects() {
     {
       name: 'OncsCare - Cancer Care Platform',
       description: 'Developed a comprehensive analytics dashboard for tracking customer behavior and sales metrics.',
-      technologies: ['Next.js', 'FlutterFlow', 'TailwindCSS', 'TypeScript', 'Supabase',  'Firebase', 'Zod', 'Motion', 'Vercel'],
+      technologies: ['Next.js', 'FlutterFlow', 'TailwindCSS', 'TypeScript', 'Supabase', 'Firebase', 'Zod', 'Motion', 'Vercel'],
     }
   ];
 
@@ -94,26 +94,24 @@ export default function Projects() {
     <section id='projects' className='py-20'>
       <div className='container mx-auto px-4'>
         <h2 className='text-3xl font-bold mb-8 text-center'>Projects</h2>
-        
+
         {/* Tab Navigation */}
         <div className='flex justify-center mb-8'>
           <div className='bg-muted p-1 rounded-lg flex gap-1'>
             <button
               onClick={() => setActiveTab('professional')}
-              className={`px-6 py-2 rounded-md transition-all duration-300 ${
-                activeTab === 'professional'
-                  ? 'bg-background text-primary shadow-md'
-                  : 'text-muted-foreground hover:text-white'
-              }`}>
+              className={`px-6 py-2 rounded-md transition-all duration-300 ${activeTab === 'professional'
+                ? 'bg-background text-primary shadow-md'
+                : 'text-muted-foreground hover:text-white'
+                }`}>
               Professional Experience
             </button>
             <button
               onClick={() => setActiveTab('personal')}
-              className={`px-6 py-2 rounded-md transition-all duration-300 ${
-                activeTab === 'personal'
+              className={`px-6 py-2 rounded-md transition-all duration-300 ${activeTab === 'personal'
                 ? 'bg-background text-primary shadow-md'
                 : 'text-muted-foreground hover:text-white'
-              }`}>
+                }`}>
               Side Projects
             </button>
           </div>

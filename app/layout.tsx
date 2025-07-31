@@ -92,15 +92,15 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <AnimatedGridPattern
-        numSquares={100}
-        maxOpacity={0.5}
-        duration={10}
-        repeatDelay={1}
-        className={cn(
-          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
-          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 fixed z-[-1]",
-        )}
-      />
+          numSquares={100}
+          maxOpacity={0.5}
+          duration={10}
+          repeatDelay={1}
+          className={cn(
+            "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 fixed",
+          )}
+        />
       </body>
     </html>
   );

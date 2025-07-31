@@ -46,7 +46,7 @@ export default function Header({
         ? 'bg-background/80 backdrop-blur-sm border-b'
         : 'bg-transparent'
         }`}>
-      <nav className='container mx-auto px-4 py-4 flex justify-between items-center'>
+      <nav className='container mx-auto px-4 md:px-8 py-4 flex justify-between items-center'>
         <a href='#home' className='text-2xl font-bold'>
           Adhham Safwan
         </a>

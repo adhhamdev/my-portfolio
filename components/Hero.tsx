@@ -63,8 +63,8 @@ export default function Hero() {
             asChild
             className='transition-transform duration-300 hover:scale-105'>
             <a
-              href='/adhham_safwan-resume.pdf'
-              title='Download Resume in PDF'
+              href='https://drive.google.com/file/d/1wrdjB8GCBdCgY0OSwno2r0WWvR3iSAdA/view?usp=sharing'
+              title='Download Resume'
               download>
               Resume
             </a>

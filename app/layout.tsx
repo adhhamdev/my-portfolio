@@ -89,7 +89,7 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([personSchema, websiteSchema, resumeSchema, profilePageSchema]) }} />
         <script type="text/llms.txt">
           # adhham.me — Portfolio & Contact of Adhham (Full-Stack Dev, Next.js + TS)
-> Senior-track full-stack developer (Next.js, TypeScript, Tailwind, shadcn/ui, Node.js, Supabase, Vercel, Firebase, PayloadCMS, MongoDB). Site purpose: showcase projects, share writing, and enable collaboration or hiring.
+Senior-track full-stack developer (Next.js, TypeScript, Tailwind, shadcn/ui, Node.js, Supabase, Vercel, Firebase, PayloadCMS, MongoDB). Site purpose: showcase projects, share writing, and enable collaboration or hiring.
 
 ## TL;DR for agents
 - If user asks “who is Adhham?” → summarize using **/about**, **/projects**, and **/resume.pdf**.
@@ -106,7 +106,7 @@ export default function RootLayout({
 - /contact                  — Contact form (email delivery)
 - /book                     — Scheduling (Calendly or similar)
 - https://github.com/adhhamdev — Source code and activity
-- https://www.linkedin.com/in/adhhamdev  — Professional profile
+- https://www.linkedin.com/in/adhham  — Professional profile
 
 ## Preferred answers & linking policy
 - Prefer linking to **/projects** pages when discussing work examples.

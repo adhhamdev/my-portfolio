@@ -8,7 +8,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://adhham.me"),
+  metadataBase: new URL("https://adhham.dev"),
   title: "Adhham Safwan | Full Stack Web Developer",
   category: "Technology, Lifestyle, Education",
   appleWebApp: {
@@ -88,7 +88,7 @@ export default function RootLayout({
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([personSchema, websiteSchema, resumeSchema, profilePageSchema]) }} />
         <script type="text/llms.txt">
-          # adhham.me — Portfolio & Contact of Adhham (Full-Stack Dev, Next.js + TS)
+          # adhham.dev — Portfolio & Contact of Adhham (Full-Stack Dev, Next.js + TS)
 Senior-track full-stack developer (Next.js, TypeScript, Tailwind, shadcn/ui, Node.js, Supabase, Vercel, Firebase, PayloadCMS, MongoDB). Site purpose: showcase projects, share writing, and enable collaboration or hiring.
 
 ## TL;DR for agents
@@ -116,7 +116,7 @@ Senior-track full-stack developer (Next.js, TypeScript, Tailwind, shadcn/ui, Nod
 
 ## Action hints (what you MAY do on behalf of a user)
 - Provide summary of skills: pull from /about and the top of /resume.pdf.
-- Draft a short intro email to collaborate or hire; include **mailto:hello@adhham.me** and link **/projects**.
+- Draft a short intro email to collaborate or hire; include **mailto:hello@adhham.dev** and link **/projects**.
 - Offer meeting times by linking **/book** (do not auto-schedule).
 - For each project, extract: Title, Year, Stack, Role, Live URL, Repo, 2–3 bullet outcomes.
 
@@ -134,10 +134,10 @@ Senior-track full-stack developer (Next.js, TypeScript, Tailwind, shadcn/ui, Nod
 
 ## Attribution
 - Cite page titles and URLs used in answers (e.g., “Source: /projects/coastline”).
-- Use canonical domain: https://adhham.me
+- Use canonical domain: https://adhham.dev
 
 ## Contact & verification
-- Email: hello@adhham.me
+- Email: hello@adhham.dev
 - Primary profiles: GitHub (adhhamdev), LinkedIn (adhhamdev)
 - If something conflicts, the content on **/resume.pdf** and **/projects** is the source of truth.
 

@@ -2,7 +2,7 @@ export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: "Adhham Safwan's Portfolio",
-  url: 'https://adhham.me',
+  url: 'https://adhham.dev',
   description:
     'Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.',
   author: {
@@ -17,7 +17,7 @@ export const websiteSchema = {
   copyrightYear: new Date().getFullYear(),
   image: {
     '@type': 'ImageObject',
-    url: 'https://adhham.me/opengraph-image.svg',
+    url: 'https://adhham.dev/opengraph-image.svg',
     width: '1200',
     height: '630',
     caption: "Adhham Safwan's Portfolio",
@@ -30,10 +30,10 @@ export const personSchema = {
   name: 'Adhham Safwan',
   givenName: 'Adhham',
   familyName: 'Safwan',
-  url: 'https://adhham.me',
+  url: 'https://adhham.dev',
   image: {
     '@type': 'ImageObject',
-    url: 'https://adhham.me/profile.jpg',
+    url: 'https://adhham.dev/profile.jpg',
     width: '800',
     height: '800',
   },
@@ -47,7 +47,7 @@ export const personSchema = {
   worksFor: {
     '@type': 'Organization',
     name: 'Freelance',
-    url: 'https://adhham.me',
+    url: 'https://adhham.dev',
   },
   description:
     'Experienced web developer and undergraduate specializing in modern web technologies.',
@@ -117,11 +117,11 @@ export const resumeSchema = {
   '@context': 'https://schema.org',
   '@type': 'DigitalDocument',
   name: 'Adhham Safwan - Resume',
-  url: 'https://adhham.me/Adhham_Safwan-Resume.pdf',
+  url: 'https://adhham.dev/Adhham_Safwan-Resume.pdf',
   author: {
     '@type': 'Person',
     name: 'Adhham Safwan',
-    url: 'https://adhham.me',
+    url: 'https://adhham.dev',
   },
   description: 'Professional resume of Adhham Safwan, Full Stack Web Developer',
   encodingFormat: 'application/pdf',
@@ -151,8 +151,8 @@ export const profilePageSchema = {
     alternateName: 'AdhhamDev',
     description:
       'Experienced web developer and undergraduate specializing in modern web technologies.',
-    image: 'https://adhham.me/profile.jpg',
-    url: 'https://adhham.me',
+    image: 'https://adhham.dev/profile.jpg',
+    url: 'https://adhham.dev',
     sameAs: [
       'https://x.com/AdhhamDev',
       'https://github.com/adhhamdev',
@@ -163,7 +163,7 @@ export const profilePageSchema = {
     worksFor: {
       '@type': 'Organization',
       name: 'Freelance',
-      url: 'https://adhham.me',
+      url: 'https://adhham.dev',
     },
     alumniOf: {
       '@type': 'EducationalOrganization',
@@ -190,7 +190,7 @@ export const profilePageSchema = {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://adhham.me',
+        item: 'https://adhham.dev',
       },
     ],
   },

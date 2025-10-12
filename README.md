@@ -1,6 +1,6 @@
 # Adhham Safwan | Portfolio
 
-Welcome to the source code of my personal website and portfolio: [adhham.me](https://adhham.me).  
+Welcome to the source code of my personal website and portfolio: [adhham.dev](https://adhham.dev).  
 I’m a Full Stack Web Developer and undergraduate—this site showcases my projects, experience, and skills.
 
 ## 🚀 Features

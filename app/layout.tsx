@@ -1,69 +1,73 @@
-import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
-import { personSchema, profilePageSchema, resumeSchema, websiteSchema } from "@/lib/jsonld-schema";
-import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import AnimatedGridPattern from '@/components/ui/animated-grid-pattern';
+import {
+  personSchema,
+  profilePageSchema,
+  resumeSchema,
+  websiteSchema,
+} from '@/lib/jsonld-schema';
+import { cn } from '@/lib/utils';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { Suspense } from 'react';
+import './globals.css';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://adhham.me"),
-  title: "Adhham Safwan | Full Stack Web Developer",
-  category: "Technology, Lifestyle, Education",
+  metadataBase: new URL('https://adhham.me'),
+  title: 'Adhham Safwan | Full Stack Web Developer',
+  category: 'Technology, Lifestyle, Education',
   appleWebApp: {
     capable: true,
     title: 'Adhham Safwan',
     statusBarStyle: 'black-translucent',
-    startupImage: [
-      '/icon.jpeg',
-    ],
+    startupImage: ['/icon.jpeg'],
   },
-  applicationName: "Adhham Safwan",
+  applicationName: 'Adhham Safwan',
   description:
-    "Experienced web developer and undergrauate specializing in modern web technologies. Explore my portfolio showcasing innovative projects and professional experiences.",
+    'Experienced web developer and undergrauate specializing in modern web technologies. Explore my portfolio showcasing innovative projects and professional experiences.',
   keywords: [
-    "portfolio",
-    "web developer",
-    "software engineer",
-    "Adhham Safwan",
-    "frontend development",
-    "backend development",
-    "full-stack developer",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Node.js",
-    "responsive design",
+    'portfolio',
+    'web developer',
+    'software engineer',
+    'Adhham Safwan',
+    'frontend development',
+    'backend development',
+    'full-stack developer',
+    'React',
+    'Next.js',
+    'TypeScript',
+    'Node.js',
+    'responsive design',
   ],
-  authors: [{ name: "Adhham Safwan", url: "/" }],
-  creator: "Adhham Safwan",
-  publisher: "Adhham Safwan",
+  authors: [{ name: 'Adhham Safwan', url: '/' }],
+  creator: 'Adhham Safwan',
+  publisher: 'Adhham Safwan',
   openGraph: {
-    title: "Adhham Safwan | Full Stack Web Developer",
+    title: 'Adhham Safwan | Full Stack Web Developer',
     description:
-      "Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.",
-    url: "/",
+      'Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.',
+    url: '/',
     siteName: "Adhham Safwan's Portfolio",
     images: [
       {
-        url: "/opengraph-image.svg",
+        url: '/opengraph-image.svg',
         width: 1200,
         height: 630,
-        alt: "Adhham Safwan Portfolio",
+        alt: 'Adhham Safwan Portfolio',
       },
     ],
-    locale: "en_US",
-    type: "website",
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Adhham Safwan | Full Stack Web Developer",
+    card: 'summary_large_image',
+    title: 'Adhham Safwan | Full Stack Web Developer',
     description:
-      "Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.",
-    creator: "@AdhhamDev",
-    site: "@AdhhamDev",
-    images: ["/opengraph-image.svg"],
+      'Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.',
+    creator: '@AdhhamDev',
+    site: '@AdhhamDev',
+    images: ['/opengraph-image.svg'],
   },
   robots: {
     index: true,
@@ -71,11 +75,11 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
-  }
+  },
 };
 
 export default function RootLayout({
@@ -84,23 +88,39 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang='en' className='scroll-smooth'>
       <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([personSchema, websiteSchema, resumeSchema, profilePageSchema]) }} />
-        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              personSchema,
+              websiteSchema,
+              resumeSchema,
+              profilePageSchema,
+            ]),
+          }}
+        />
+        <link
+          rel='stylesheet'
+          type='text/css'
+          href='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css'
+        />
       </head>
       <body className={inter.className}>
         {children}
-        <AnimatedGridPattern
-          numSquares={100}
-          maxOpacity={0.5}
-          duration={10}
-          repeatDelay={1}
-          className={cn(
-            "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
-            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 fixed",
-          )}
-        />
+        <Suspense>
+          <AnimatedGridPattern
+            numSquares={100}
+            maxOpacity={0.5}
+            duration={10}
+            repeatDelay={1}
+            className={cn(
+              '[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]',
+              'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 fixed'
+            )}
+          />
+        </Suspense>
       </body>
     </html>
   );

@@ -1,14 +1,15 @@
 import { Github, Instagram, Linkedin, Mail } from 'lucide-react';
+import { Suspense } from 'react';
+import Copyright from './Copyright';
 
 export default function Footer() {
   return (
     <footer className='py-8 px-4 md:px-16'>
       <div className='container mx-auto'>
         <div className='flex flex-col md:flex-row justify-between items-center'>
-          <p>
-            &copy; {new Date().getFullYear()} Adhham Safwan. All rights
-            reserved.
-          </p>
+          <Suspense>
+            <Copyright />
+          </Suspense>
           <div className='flex items-center space-x-4 mt-4 md:mt-0'>
             <a
               href='https://github.com/adhhamdev'

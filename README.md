@@ -1,34 +1,47 @@
-# Portfolio Website
+# Adhham Safwan | Portfolio
 
-A modern, responsive portfolio website built with Next.js, TypeScript, and TailwindCSS. Features smooth animations with Framer Motion and a clean, professional design.
+Welcome to the source code of my personal website and portfolio: [adhham.dev](https://adhham.dev).  
+I’m a Full Stack Web Developer and undergraduate—this site showcases my projects, experience, and skills.
 
-## 🌟 Features
+## 🚀 Features
 
-- Responsive design that works on all devices
-- Dark/Light mode support
-- Smooth page animations and transitions
-- SEO optimized with Next.js metadata
-- Contact form integration
-- Progressive Web App (PWA) capabilities
-- Interactive UI components
-- Optimized performance
+- **Modern, Responsive Design**  
+  Built with Next.js and TypeScript, featuring smooth animations and adaptive layouts for all devices.
 
-## 🛠️ Built With
+- **Sections**  
+  - Hero: Quick intro and call-to-action  
+  - About: Background and summary  
+  - Experience: Work and project history  
+  - Education: Academic background  
+  - Skills: Technical proficiencies  
+  - Projects: Highlighted works  
+  - Contact: Easy ways to reach me
 
-- [Next.js](https://nextjs.org/) - React framework for production
-- [TypeScript](https://www.typescriptlang.org/) - Static type checking
-- [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [Framer Motion](https://www.framer.com/motion/) - Animation library
-- [Shadcn/ui](https://ui.shadcn.com/) - UI components
-- [Lucide Icons](https://lucide.dev/) - Beautiful icons
+- **Animated Navigation**  
+  Interactive menu with motion transitions, powered by Framer Motion.
 
-## 🚀 Getting Started
+- **SEO & PWA Ready**  
+  Includes custom metadata, Open Graph, Twitter cards, sitemap, and a manifest for installability.
 
-### Prerequisites
+## 🛠️ Tech Stack
 
-- Node.js (v18 or higher)
-- npm or yarn
+- [Next.js](https://nextjs.org/) (App Router)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Google Fonts (Inter)](https://fonts.google.com/specimen/Inter)
 
-### Installation
+## 📁 Project Structure
 
-1. Clone the repository
+```
+/app
+  page.tsx        # Main page layout, imports all section components
+  layout.tsx      # Root layout, SEO, fonts, metadata
+  globals.css     # Global styles/theme
+  manifest.json   # PWA manifest
+  sitemap.xml     # Sitemap for search engines
+/components      # UI & section components (About, Projects, etc.)
+/lib             # Shared logic and JSON-LD schemas
+/public          # Static assets (images, icons, etc.)
+```

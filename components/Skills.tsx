@@ -98,8 +98,8 @@ export default function Skills() {
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ scale: 0.8 }}
+              whileInView={{ scale: 1 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
               className='bg-background p-4 rounded-lg shadow-sm text-center flex flex-col items-center justify-center transition-transform duration-300 hover: scale-105'>
               {skill.icon}

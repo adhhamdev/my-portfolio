@@ -120,14 +120,14 @@ export default function Projects() {
         {/* Projects Grid */}
         <motion.div
           key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: 20 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.3 }}
           className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {currentProjects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className='bg-muted p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 flex flex-col justify-between text-dark-bg-foreground'>

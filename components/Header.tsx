@@ -58,9 +58,8 @@ export default function Header({
                 href={item.href}
                 className={`text-lg relative overflow-hidden group`}>
                 {item.name}
-                <motion.span
+                <span
                   className='absolute bottom-0 left-0 w-full h-0.5 bg-primary origin-left transform scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100'
-                  initial={false}
                 />
               </a>
             ))}

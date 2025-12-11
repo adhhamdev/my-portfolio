@@ -1,9 +1,5 @@
-'use client';
-
-import { Inter } from "next/font/google";
+'use client'
 import { Timeline } from './ui/timeline';
-
-const inter = Inter({ subsets: ["latin"] });
 
 function ExperienceItem({ title, company, href, description }: { title: string, company: string, href: string, description: string }) {
   return (

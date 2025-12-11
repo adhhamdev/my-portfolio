@@ -12,8 +12,8 @@ export default function Hero() {
       className='min-h-screen flex items-center justify-center'>
       <div className='text-center'>
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ scale: 0.5 }}
+          animate={{scale: 1 }}
           transition={{
             duration: 0.8,
             delay: 0.5,
@@ -41,22 +41,22 @@ export default function Hero() {
           </motion.div>
         </motion.div>
         <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: -20 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.5 }}
           className='text-4xl md:text-6xl font-bold mb-4'>
           Adhham Safwan
         </motion.h1>
         <motion.p
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: -20 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className='text-xl md:text-2xl mb-8'>
           Full Stack Web Developer
         </motion.p>
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: -20 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           className='space-x-4'>
           <Button

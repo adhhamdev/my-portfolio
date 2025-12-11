@@ -32,7 +32,7 @@ export default function Footer() {
               <i className='devicon-twitter-original text-2xl'></i>
             </a>
             <a
-              href='https://instagram.com/msmadhhamdev'
+              href='https://instagram.com/adhhamvoid'
               target='_blank'
               className='text-muted-foreground hover:text-primary transition-colors duration-300'>
               <Instagram className='w-6 h-6' />

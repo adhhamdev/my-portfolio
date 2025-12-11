@@ -24,8 +24,8 @@ export default function Education() {
           {education.map((edu, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              whileInView={{ y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="mb-8 relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:bottom-0 before:w-0.5 before:bg-primary">
               <h3 className='text-xl font-semibold'>{edu.degree}</h3>

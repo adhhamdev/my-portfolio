@@ -44,11 +44,11 @@ export const personSchema = {
     'https://linkedin.com/in/adhham',
     'https://instagram.com/msmadhhamdev',
   ],
-  jobTitle: 'Full Stack Web Developer',
+  jobTitle: 'Co-Founder & CTO',
   worksFor: {
     '@type': 'Organization',
-    name: 'Freelance',
-    url: 'https://adhham.me',
+    name: 'Orbitra Tech',
+    url: 'https://orbitratech.net',
   },
   description:
     'Experienced web developer and undergraduate specializing in modern web technologies.',
@@ -124,13 +124,13 @@ export const resumeSchema = {
     name: 'Adhham Safwan',
     url: 'https://adhham.me',
   },
-  description: 'Professional resume of Adhham Safwan, Full Stack Web Developer',
+  description: 'Professional resume of Adhham Safwan, Co-Founder & CTO',
   encodingFormat: 'application/pdf',
   dateModified: '2024-11-03',
   about: {
     '@type': 'Person',
     name: 'Adhham Safwan',
-    jobTitle: 'Full Stack Web Developer',
+    jobTitle: 'Co-Founder & CTO',
   },
   keywords: [
     'web developer',
@@ -160,11 +160,11 @@ export const profilePageSchema = {
       'https://linkedin.com/in/adhham',
       'https://instagram.com/msmadhhamdev',
     ],
-    jobTitle: 'Full Stack Web Developer',
+    jobTitle: 'Co-Founder & CTO',
     worksFor: {
       '@type': 'Organization',
-      name: 'Freelance',
-      url: 'https://adhham.me',
+      name: 'Orbitra Tech',
+      url: 'https://orbitratech.net',
     },
     alumniOf: {
       '@type': 'EducationalOrganization',

@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://adhham.me'),
-  title: 'Adhham Safwan | Full Stack Web Developer',
+  title: 'Adhham Safwan | Co-Founder & CTO · Full Stack Developer',
   category: 'Technology, Lifestyle, Education',
   appleWebApp: {
     capable: true,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   creator: 'Adhham Safwan',
   publisher: 'Adhham Safwan',
   openGraph: {
-    title: 'Adhham Safwan | Full Stack Web Developer',
+    title: 'Adhham Safwan | Co-Founder & CTO · Full Stack Developer',
     description:
       'Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.',
     url: '/',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Adhham Safwan | Full Stack Web Developer',
+    title: 'Adhham Safwan | Co-Founder & CTO · Full Stack Developer',
     description:
       'Explore the innovative projects and professional experiences of Adhham Safwan, a skilled web developer and software engineer.',
     creator: '@AdhhamDev',

@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'motion/react';
+import { m } from 'motion/react';
+import Image from 'next/image';
 
 export default function Skills() {
   const skills = [
@@ -70,11 +71,27 @@ export default function Skills() {
     },
     {
       name: 'FlutterFlow',
-      icon: <img src='/flutterflow.jpeg' alt='FlutterFlow' className='w-10 h-10 rounded' />,
+      icon: (
+        <Image
+          src='/flutterflow.jpeg'
+          alt='FlutterFlow'
+          width={40}
+          height={40}
+          className='w-10 h-10 rounded'
+        />
+      ),
     },
     {
       name: 'PayloadCMS',
-      icon: <img src='/payloadcms.png' alt='PayloadCMS' className='w-10 h-10 rounded' />,
+      icon: (
+        <Image
+          src='/payloadcms.png'
+          alt='PayloadCMS'
+          width={40}
+          height={40}
+          className='w-10 h-10 rounded'
+        />
+      ),
     },
     {
       name: 'Vercel',
@@ -96,15 +113,15 @@ export default function Skills() {
         <h2 className='text-3xl font-bold mb-8 text-center text-dark-bg-foreground'>Skills</h2>
         <div className='max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
           {skills.map((skill, index) => (
-            <motion.div
-              key={index}
+            <m.div
+              key={skill.name}
               initial={{ scale: 0.8 }}
               whileInView={{ scale: 1 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
               className='bg-background p-4 rounded-lg shadow-sm text-center flex flex-col items-center justify-center transition-transform duration-300 hover: scale-105'>
               {skill.icon}
               <span className='mt-2'>{skill.name}</span>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

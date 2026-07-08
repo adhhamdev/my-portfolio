@@ -1,14 +1,12 @@
 import AnimatedGridPattern from '@/components/ui/animated-grid-pattern';
-import {
-  personSchema,
-  profilePageSchema,
-  resumeSchema,
-  websiteSchema,
-} from '@/lib/jsonld-schema';
+import { MotionProvider } from '@/components/motion-provider';
+import { getJsonLdSchemas } from '@/lib/jsonld-schema';
+import { serializeJsonLd } from '@/lib/safe-json-ld';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Suspense } from 'react';
+import './devicon/devicon.min.css';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -82,31 +80,37 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLdSchemas = await getJsonLdSchemas();
+
   return (
     <html lang='en' className='scroll-smooth'>
       <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([personSchema, websiteSchema, resumeSchema, profilePageSchema]) }} />
-        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLdSchemas) }}
+        />
       </head>
       <body className={inter.className}>
-        {children}
-        <Suspense>
-          <AnimatedGridPattern
-            numSquares={100}
-            maxOpacity={0.5}
-            duration={10}
-            repeatDelay={1}
-            className={cn(
-              '[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]',
-              'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 fixed'
-            )}
-          />
-        </Suspense>
+        <MotionProvider>
+          {children}
+          <Suspense>
+            <AnimatedGridPattern
+              numSquares={100}
+              maxOpacity={0.5}
+              duration={10}
+              repeatDelay={1}
+              className={cn(
+                '[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]',
+                'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 fixed'
+              )}
+            />
+          </Suspense>
+        </MotionProvider>
       </body>
     </html>
   );

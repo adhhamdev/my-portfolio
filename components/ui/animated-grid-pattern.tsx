@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { m } from "motion/react";
 import { useEffect, useId, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
@@ -10,12 +10,52 @@ interface GridPatternProps {
   height?: number;
   x?: number;
   y?: number;
-  strokeDasharray?: any;
+  strokeDasharray?: number | string;
   numSquares?: number;
   className?: string;
   maxOpacity?: number;
   duration?: number;
   repeatDelay?: number;
+}
+
+type Square = {
+  id: number;
+  pos: [number, number];
+};
+
+function createSquares(
+  count: number,
+  containerWidth: number,
+  containerHeight: number,
+  cellWidth: number,
+  cellHeight: number,
+): Square[] {
+  if (!containerWidth || !containerHeight) {
+    return Array.from({ length: count }, (_, id) => ({
+      id,
+      pos: [0, 0] as [number, number],
+    }));
+  }
+
+  return Array.from({ length: count }, (_, id) => ({
+    id,
+    pos: [
+      Math.floor((Math.random() * containerWidth) / cellWidth),
+      Math.floor((Math.random() * containerHeight) / cellHeight),
+    ] as [number, number],
+  }));
+}
+
+function randomPos(
+  containerWidth: number,
+  containerHeight: number,
+  cellWidth: number,
+  cellHeight: number,
+): [number, number] {
+  return [
+    Math.floor((Math.random() * containerWidth) / cellWidth),
+    Math.floor((Math.random() * containerHeight) / cellHeight),
+  ];
 }
 
 export function GridPattern({
@@ -32,67 +72,58 @@ export function GridPattern({
   ...props
 }: GridPatternProps) {
   const id = useId();
-  const containerRef = useRef(null);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const [squares, setSquares] = useState(() => generateSquares(numSquares));
+  const containerRef = useRef<SVGSVGElement>(null);
+  const dimensionsRef = useRef({ width: 0, height: 0 });
+  const [squares, setSquares] = useState<Square[]>(() =>
+    createSquares(numSquares, 0, 0, width, height),
+  );
 
-  function getPos() {
-    return [
-      Math.floor((Math.random() * dimensions.width) / width),
-      Math.floor((Math.random() * dimensions.height) / height),
-    ];
-  }
+  const updateSquarePosition = (squareId: number) => {
+    const { width: containerWidth, height: containerHeight } =
+      dimensionsRef.current;
 
-  // Adjust the generateSquares function to return objects with an id, x, and y
-  function generateSquares(count: number) {
-    return Array.from({ length: count }, (_, i) => ({
-      id: i,
-      pos: getPos(),
-    }));
-  }
-
-  // Function to update a single square's position
-  const updateSquarePosition = (id: number) => {
     setSquares((currentSquares) =>
       currentSquares.map((sq) =>
-        sq.id === id
+        sq.id === squareId
           ? {
               ...sq,
-              pos: getPos(),
+              pos: randomPos(
+                containerWidth,
+                containerHeight,
+                width,
+                height,
+              ),
             }
           : sq,
       ),
     );
   };
 
-  // Update squares to animate in
   useEffect(() => {
-    if (dimensions.width && dimensions.height) {
-      setSquares(generateSquares(numSquares));
-    }
-  }, [dimensions, numSquares]);
+    const container = containerRef.current;
+    if (!container) return;
 
-  // Resize observer to update container dimensions
-  useEffect(() => {
+    const syncFromRect = (rect: DOMRectReadOnly) => {
+      dimensionsRef.current = {
+        width: rect.width,
+        height: rect.height,
+      };
+      setSquares(
+        createSquares(numSquares, rect.width, rect.height, width, height),
+      );
+    };
+
     const resizeObserver = new ResizeObserver((entries) => {
-      for (let entry of entries) {
-        setDimensions({
-          width: entry.contentRect.width,
-          height: entry.contentRect.height,
-        });
+      for (const entry of entries) {
+        syncFromRect(entry.contentRect);
       }
     });
 
-    if (containerRef.current) {
-      resizeObserver.observe(containerRef.current);
-    }
+    resizeObserver.observe(container);
+    syncFromRect(container.getBoundingClientRect());
 
-    return () => {
-      if (containerRef.current) {
-        resizeObserver.unobserve(containerRef.current);
-      }
-    };
-  }, [containerRef]);
+    return () => resizeObserver.disconnect();
+  }, [numSquares, width, height]);
 
   return (
     <svg
@@ -122,8 +153,8 @@ export function GridPattern({
       </defs>
       <rect width="100%" height="100%" fill={`url(#${id})`} />
       <svg x={x} y={y} className="overflow-visible">
-        {squares.map(({ pos: [x, y], id }, index) => (
-          <motion.rect
+        {squares.map(({ pos: [squareX, squareY], id: squareId }, index) => (
+          <m.rect
             initial={{ opacity: 0 }}
             animate={{ opacity: maxOpacity }}
             transition={{
@@ -131,13 +162,14 @@ export function GridPattern({
               repeat: 1,
               delay: index * 0.1,
               repeatType: "reverse",
+              repeatDelay,
             }}
-            onAnimationComplete={() => updateSquarePosition(id)}
-            key={`${x}-${y}-${index}`}
+            onAnimationComplete={() => updateSquarePosition(squareId)}
+            key={`${squareId}-${squareX}-${squareY}`}
             width={width - 1}
             height={height - 1}
-            x={x * width + 1}
-            y={y * height + 1}
+            x={squareX * width + 1}
+            y={squareY * height + 1}
             fill="currentColor"
             strokeWidth="0"
           />

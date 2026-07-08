@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
-import { motion } from 'motion/react';
+import { m } from 'motion/react';
 import Image from 'next/image';
 
 export default function Hero() {
@@ -11,7 +11,7 @@ export default function Hero() {
       id='home'
       className='min-h-screen flex items-center justify-center'>
       <div className='text-center'>
-        <motion.div
+        <m.div
           initial={{ scale: 0.5 }}
           animate={{scale: 1 }}
           transition={{
@@ -20,7 +20,7 @@ export default function Hero() {
             ease: [0, 0.71, 0.2, 1.01],
           }}
           className='mb-8'>
-          <motion.div
+          <m.div
             animate={{
               y: [-10, 10, -10],
             }}
@@ -38,23 +38,23 @@ export default function Hero() {
               alt='Adhham Safwan'
               className='rounded-full'
             />
-          </motion.div>
-        </motion.div>
-        <motion.h1
+          </m.div>
+        </m.div>
+        <m.h1
           initial={{ y: -20 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.5 }}
           className='text-4xl md:text-6xl font-bold mb-4'>
           Adhham Safwan
-        </motion.h1>
-        <motion.p
+        </m.h1>
+        <m.p
           initial={{ y: -20 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className='text-xl md:text-2xl mb-8'>
           Full Stack Web Developer
-        </motion.p>
-        <motion.div
+        </m.p>
+        <m.div
           initial={{ y: -20 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -75,14 +75,14 @@ export default function Hero() {
             className='transition-transform duration-300 hover:scale-105'>
             <a href='#contact'>Contact Me</a>
           </Button>
-        </motion.div>
+        </m.div>
       </div>
-      <motion.div
+      <m.div
         className='absolute bottom-8'
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.8 }}>
-        <motion.div
+        <m.div
           animate={{ y: [0, 10, 0] }}
           transition={{
             duration: 1.5,
@@ -90,9 +90,9 @@ export default function Hero() {
             ease: 'easeInOut',
           }}>
           <ChevronDown className='w-8 h-8 mx-auto mb-2' />
-        </motion.div>
+        </m.div>
         <p className='text-sm'>Scroll to explore</p>
-      </motion.div>
+      </m.div>
     </section>
   );
 }

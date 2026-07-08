@@ -1,3 +1,5 @@
+import { cacheLife } from 'next/cache';
+
 export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -14,7 +16,6 @@ export const websiteSchema = {
     name: 'Adhham Safwan',
   },
   inLanguage: 'en-US',
-  copyrightYear: new Date().getFullYear(),
   image: {
     '@type': 'ImageObject',
     url: 'https://adhham.me/opengraph-image.svg',
@@ -195,3 +196,15 @@ export const profilePageSchema = {
     ],
   },
 };
+
+export async function getJsonLdSchemas() {
+  'use cache';
+  cacheLife('max');
+
+  return [
+    personSchema,
+    { ...websiteSchema, copyrightYear: new Date().getFullYear() },
+    resumeSchema,
+    profilePageSchema,
+  ];
+}

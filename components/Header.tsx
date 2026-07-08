@@ -1,7 +1,7 @@
 'use client';
 
 import { Menu, X } from 'lucide-react';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, m } from 'motion/react';
 import { useEffect, useState } from 'react';
 
 interface HeaderProps {
@@ -66,28 +66,29 @@ export default function Header({
           </div>
         ) : (
           <button
+            type='button'
             className='z-50 relative'
             onClick={toggleMenu}
             aria-label='Toggle menu'>
             <AnimatePresence mode='wait'>
               {isMenuOpen ? (
-                <motion.div
+                <m.div
                   key='close'
                   initial={{ rotate: -180, opacity: 0 }}
                   animate={{ rotate: 0, opacity: 1 }}
                   exit={{ rotate: 180, opacity: 0 }}
                   transition={{ duration: 0.3 }}>
                   <X className='w-6 h-6' />
-                </motion.div>
+                </m.div>
               ) : (
-                <motion.div
+                <m.div
                   key='menu'
                   initial={{ rotate: -180, opacity: 0 }}
                   animate={{ rotate: 0, opacity: 1 }}
                   exit={{ rotate: 180, opacity: 0 }}
                   transition={{ duration: 0.3 }}>
                   <Menu className='w-6 h-6' />
-                </motion.div>
+                </m.div>
               )}
             </AnimatePresence>
           </button>

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'motion/react';
+import { m } from 'motion/react';
 
 export default function Education() {
   const education = [
@@ -22,8 +22,8 @@ export default function Education() {
         <h2 className='text-3xl font-bold mb-8 text-center'>Education</h2>
         <div className='max-w-3xl mx-auto'>
           {education.map((edu, index) => (
-            <motion.div
-              key={index}
+            <m.div
+              key={edu.degree}
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -31,7 +31,7 @@ export default function Education() {
               <h3 className='text-xl font-semibold'>{edu.degree}</h3>
               <p className='text-muted-foreground'>{edu.school}</p>
               <p className='text-sm text-muted-foreground'>{edu.period}</p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

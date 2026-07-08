@@ -1,7 +1,7 @@
 'use client';
 
 import { Code, ExternalLink } from 'lucide-react';
-import { motion } from 'motion/react';
+import { m } from 'motion/react';
 import { useState } from 'react';
 
 interface Project {
@@ -99,6 +99,7 @@ export default function Projects() {
         <div className='flex justify-center mb-8'>
           <div className='bg-muted p-1 rounded-lg flex gap-1'>
             <button
+              type='button'
               onClick={() => setActiveTab('professional')}
               className={`px-6 py-2 rounded-md transition-all duration-300 ${activeTab === 'professional'
                 ? 'bg-background text-primary shadow-md'
@@ -107,6 +108,7 @@ export default function Projects() {
               Professional Experience
             </button>
             <button
+              type='button'
               onClick={() => setActiveTab('personal')}
               className={`px-6 py-2 rounded-md transition-all duration-300 ${activeTab === 'personal'
                 ? 'bg-background text-primary shadow-md'
@@ -118,15 +120,15 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <motion.div
+        <m.div
           key={activeTab}
           initial={{ y: 20 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.3 }}
           className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {currentProjects.map((project, index) => (
-            <motion.div
-              key={index}
+            <m.div
+              key={project.name}
               initial={{ y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -162,9 +164,9 @@ export default function Projects() {
                   <Code className='w-4 h-4 mr-1' /> Source Code
                 </a>}
               </div>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

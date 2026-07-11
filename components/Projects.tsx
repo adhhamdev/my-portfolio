@@ -58,7 +58,7 @@ export default function Projects() {
         'Supabase',
       ],
       platforms: ['web'],
-      image: '/orbitra_logo.png',
+      image: '/orbitra_icon.png',
       liveLink: 'https://orbitratech.net',
       sourceLink: 'https://github.com/orbitratechnology/orbitratech-landing',
     },
@@ -91,7 +91,7 @@ export default function Projects() {
         'TypeScript',
       ],
       platforms: ['android', 'ios'],
-      image: '/orbitra_icon.png',
+      image: '/gemfort_logo.png',
       sourceLink: 'https://github.com/orbitratechnology/gemfort',
     },
     {
@@ -132,6 +132,7 @@ export default function Projects() {
         'shadcn/ui',
       ],
       platforms: ['web'],
+      image: '/heygems.png',
       liveLink: 'https://hey-gems-showcase.vercel.app',
       sourceLink: 'https://github.com/adhhamdev/hey-gems-showcase',
     },
@@ -290,13 +291,13 @@ export default function Projects() {
         <h2 className='text-3xl font-bold mb-8 text-center'>Projects</h2>
 
         <div className='flex justify-center mb-8'>
-          <div className='bg-muted p-1 rounded-lg flex flex-wrap gap-1 justify-center'>
+          <div className='bg-muted p-1 rounded-lg flex w-full max-w-md sm:w-auto sm:max-w-none gap-1'>
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 type='button'
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-5 py-2 rounded-md transition-all duration-300 ${
+                className={`flex-1 sm:flex-none px-2.5 sm:px-5 py-2 rounded-md text-xs sm:text-base whitespace-nowrap transition-all duration-300 ${
                   activeTab === tab.id
                     ? 'bg-background text-primary shadow-md'
                     : 'text-muted-foreground hover:text-white'
@@ -323,7 +324,7 @@ export default function Projects() {
               <div>
                 {project.image && (
                   <div
-                    className={`relative w-full h-36 mb-4 rounded-md overflow-hidden flex items-center justify-center ${project.image === '/orbitra_logo.png' ? 'bg-white' : 'bg-background'}`}>
+                    className={`relative w-full h-36 mb-4 rounded-md overflow-hidden flex items-center `}>
                     <Image
                       src={project.image}
                       alt={project.name}
@@ -332,7 +333,7 @@ export default function Projects() {
                       className={
                         project.imageFitHeight
                           ? 'h-full w-auto max-w-full object-contain'
-                          : `object-contain max-h-28 w-auto ${project.image === '/oncscare-icon.PNG' ? 'rounded-full' : ''}`
+                          : `object-contain max-h-28 w-auto rounded-md`
                       }
                     />
                   </div>

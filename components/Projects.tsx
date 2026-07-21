@@ -81,7 +81,7 @@ export default function Projects() {
     {
       name: 'GemFort',
       description:
-        'Mobile platform for the Sri Lankan gem industry — GemNet verified business directory and GemTrack private inventory, cheque, and trip management for traders. In active development.',
+        'Mobile platform for the Sri Lankan gem industry — GemFort verified business directory and GemTrack private inventory, cheque, and trip management for traders. In active development.',
       technologies: [
         'Expo',
         'React Native',
